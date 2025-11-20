@@ -22,8 +22,10 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
+-- Base64 decode selected text
+vim.keymap.set('v', '<leader>b', 'c<c-r>=system("base64 --decode", @\")<cr><esc>', {desc = 'Base64 decode selected text'})
 
-
+-- Enable multiple indentations in a row
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
