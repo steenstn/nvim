@@ -43,3 +43,6 @@ vim.keymap.set('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>', {desc = 
 vim.keymap.set('n', '<leader><leader>', contextAwareAction, {desc = 'Do things'})
 vim.keymap.set('n', '<leader>e', ':Lexplore<CR>', {desc = 'Open filetree'})
 
+ -- Enable escape to exit normal mode
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
+
